@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partial/head-meta.ejs') %>
+    <title>Alifiandyn</title>
+  </head>
+  <body>
+    <div class="card" style="width: 18rem">
+      <img src="<%= data.profilePicture %>" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title"><%= data.nama %></h5>
+        <p class="card-text"><%= data.bio %></p>
+        <a href="#" class="btn btn-primary" disabled>Edit</a>
+      </div>
+    </div>
+  </body>
+</html>

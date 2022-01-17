@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partial/head-meta.ejs') %>
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('partial/navbar.ejs') %>
+    <h1 class="text-center"><%= title %></h1>
+    <% if (errorMessage) { %> <%- include('partial/error-message') %> <% } %>
+    <div class="row">
+      <% album.forEach(data => { %>
+      <div class="card col-3" style="width: 18rem">
+        <img src="<%= data.url %>" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title"><%= data.title %></h5>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </body>
+</html>
